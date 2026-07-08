@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="#ffffff"/>
+  <g transform="translate(128, 128)">
+    <path d="M 0,-60 Q 30,-60 45,-45 Q 60,-30 60,0 Q 30,0 15,-15 Q 0,-30 0,-60 Z" fill="#1e3a34"/>
+    <path d="M 60,0 Q 60,30 45,45 Q 30,60 0,60 Q 0,30 15,15 Q 30,0 60,0 Z" fill="#1e3a34"/>
+    <path d="M 0,60 Q -30,60 -45,45 Q -60,30 -60,0 Q -30,0 -15,15 Q 0,30 0,60 Z" fill="#1e3a34"/>
+    <path d="M -60,0 Q -60,-30 -45,-45 Q -30,-60 0,-60 Q 0,-30 -15,-15 Q -30,0 -60,0 Z" fill="#1e3a34"/>
+  </g>
+  <circle cx="128" cy="128" r="18" fill="#1e3a34"/>
+</svg>
