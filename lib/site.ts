@@ -18,7 +18,7 @@ export const SITE = {
   social: {
     instagram: 'https://www.instagram.com/gr21mktimobiliario/',
     instagramHandle: '@gr21mktimobiliario',
-    linkedin: 'https://www.linkedin.com/company/gr21imoveis/',
+    linkedin: 'https://www.linkedin.com/company/grupo-gr21/',
   },
 };
 
