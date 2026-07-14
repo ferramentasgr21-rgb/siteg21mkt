@@ -4,7 +4,7 @@ export const SITE = {
   tagline: 'Aceleradora de Vendas e Marketing Imobiliário',
   description:
     'Consultoria integrada de marketing e vendas 100% focada no mercado imobiliário. Do branding ao pós-venda, aceleramos as vendas do seu empreendimento com metodologia comprovada.',
-  url: 'https://gr21imoveis.com.br',
+  url:'https://gr21mkt.com.br',
   email: 'rafael@gr21imoveis.com.br',
   phoneDisplay: '+55 44 99132 3939',
   phoneRaw: '5544991323939',

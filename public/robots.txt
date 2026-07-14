@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://magenta-cuchufli-101778.netlify.app/sitemap.xml
+Sitemap: https://gr21mkt.com.br/sitemap.xml
