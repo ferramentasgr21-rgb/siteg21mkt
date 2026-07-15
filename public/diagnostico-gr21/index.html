@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Diagnóstico estratégico gratuito da GR21 para construtoras e incorporadoras que desejam integrar marketing e vendas, aumentar a conversão e acelerar resultados.">
+  <meta name="theme-color" content="#1E3A34">
+<title>Diagnóstico Estratégico Gratuito | GR21</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo-principal">Ir para o conteúdo principal</a>
+
+  <header class="header" aria-label="Cabeçalho principal">
+    <div class="container header__content">
+      <a class="brand" href="#inicio" aria-label="GR21 — início da página">
+        <img src="/gr21-logo.png" alt="GR21 Aceleradora de Vendas e Marketing Imobiliário" width="180" height="36">
+      </a>
+      <a class="button button--small" href="#formulario">Quero meu diagnóstico</a>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+    <section class="hero" id="inicio">
+      <div class="hero__background" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <span class="eyebrow eyebrow--light">Estratégia integrada para o mercado imobiliário</span>
+          <h1>Transforme seu empreendimento em uma operação de vendas mais previsível</h1>
+          <p class="hero__lead">Identifique os gargalos que fazem leads esfriarem, integre marketing e comercial e descubra as prioridades que podem acelerar suas vendas.</p>
+
+          <div class="hero__actions">
+            <a class="button button--hero" href="#formulario">Quero meu diagnóstico gratuito</a>
+            <span class="hero__note">Conversa estratégica, sem compromisso e focada no seu momento.</span>
+          </div>
+
+          <ul class="hero__checks" aria-label="Benefícios do diagnóstico">
+            <li><span aria-hidden="true">✓</span> Leitura do funil e dos principais gargalos</li>
+            <li><span aria-hidden="true">✓</span> Recomendações práticas para marketing e vendas</li>
+            <li><span aria-hidden="true">✓</span> Próximos passos priorizados com clareza</li>
+          </ul>
+        </div>
+
+        <div class="hero__form reveal" id="formulario">
+          <div class="form-card">
+          <div class="form-card__heading">
+            <span>Diagnóstico gratuito</span>
+            <h2>Fale com um especialista da GR21</h2>
+            <p>Preencha os campos abaixo. Leva menos de dois minutos.</p>
+          </div>
+
+          <form
+            id="lead-form"
+            name="diagnostico-gr21"
+            method="POST"
+            action="/diagnostico-gr21/obrigado.html"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            novalidate
+          >
+            <!-- Obrigatório para envio AJAX e identificação do formulário no Netlify -->
+            <input type="hidden" name="form-name" value="diagnostico-gr21">
+            <input
+              type="hidden"
+              name="subject"
+              data-remove-prefix
+              value="Novo lead — Diagnóstico GR21"
+            >
+
+            <!-- Dados de atribuição para campanhas de tráfego pago -->
+            <input type="hidden" name="origem" value="Landing Page — Diagnóstico GR21">
+            <input type="hidden" name="pagina" id="pagina" value="">
+            <input type="hidden" name="referrer" id="referrer" value="">
+            <input type="hidden" name="enviado_em" id="enviado-em" value="">
+            <input type="hidden" name="utm_source" id="utm-source" value="">
+            <input type="hidden" name="utm_medium" id="utm-medium" value="">
+            <input type="hidden" name="utm_campaign" id="utm-campaign" value="">
+            <input type="hidden" name="utm_content" id="utm-content" value="">
+            <input type="hidden" name="utm_term" id="utm-term" value="">
+            <input type="hidden" name="gclid" id="gclid" value="">
+            <input type="hidden" name="fbclid" id="fbclid" value="">
+            <div class="honeypot" aria-hidden="true">
+              <label for="bot-field">Não preencha este campo</label>
+              <input
+                type="text"
+                id="bot-field"
+                name="bot-field"
+                tabindex="-1"
+                autocomplete="off"
+              >
+            </div>
+
+            <div class="field">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Seu nome e sobrenome" required aria-describedby="erro-nome">
+              <span class="field__error" id="erro-nome" data-error-for="nome" aria-live="polite"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="email">E-mail profissional</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="nome@empresa.com.br" required aria-describedby="erro-email">
+                <span class="field__error" id="erro-email" data-error-for="email" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="whatsapp">WhatsApp</label>
+                <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" maxlength="15" placeholder="(44) 99999-9999" required aria-describedby="erro-whatsapp">
+                <span class="field__error" id="erro-whatsapp" data-error-for="whatsapp" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="desafio">Qual é o principal desafio hoje?</label>
+              <select id="desafio" name="desafio" required aria-describedby="erro-desafio">
+                <option value="">Selecione seu principal desafio</option>
+                <option value="lancamento-planejamento">Lançamento em planejamento</option>
+                <option value="empreendimento-em-vendas">Empreendimento em comercialização</option>
+                <option value="estoque-remanescente">Estoque remanescente</option>
+                <option value="estruturacao-operacao">Estruturação de marketing e vendas</option>
+                <option value="outro">Outro desafio</option>
+              </select>
+              <span class="field__error" id="erro-desafio" data-error-for="desafio" aria-live="polite"></span>
+            </div>
+
+            <div class="field field--checkbox">
+              <label class="checkbox-label" for="consentimento">
+                <input type="checkbox" id="consentimento" name="consentimento_lgpd" value="Autorizado" required aria-describedby="erro-consentimento">
+                <span>Concordo com o uso dos meus dados para contato comercial, conforme a <a href="#privacidade">Política de Privacidade</a>.</span>
+              </label>
+              <span class="field__error" id="erro-consentimento" data-error-for="consentimento" aria-live="polite"></span>
+            </div>
+
+            <button class="button button--submit" type="submit" id="submit-button">
+              <span class="button__text">Solicitar diagnóstico gratuito</span>
+              <span class="button__loader" aria-hidden="true"></span>
+            </button>
+
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <p class="form-card__privacy">Seus dados são tratados com segurança e não serão vendidos ou compartilhados para finalidades incompatíveis.</p>
+          </form>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof" aria-label="Números de experiência e resultados">
+      <div class="container proof__grid">
+        <article class="proof__item reveal">
+          <strong>+20</strong>
+          <span>anos de experiência no mercado</span>
+        </article>
+        <article class="proof__item reveal">
+          <strong>+R$ 120M</strong>
+          <span>em VGV sob gestão em 2025</span>
+        </article>
+        <article class="proof__item reveal">
+          <strong>4</strong>
+          <span>empreendimentos em gestão completa</span>
+        </article>
+        <article class="proof__item reveal">
+          <strong>+40</strong>
+          <span>imobiliárias parceiras ativas</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--light" id="beneficios">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">O que muda na prática</span>
+          <h2>Mais clareza para investir, acompanhar e converter</h2>
+          <p>A GR21 atua no ponto em que estratégia, comunicação, processo comercial e dados precisam funcionar como uma única operação.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 14a8 8 0 1 1 16 0"/>
+                <path d="M12 14l4-4"/>
+                <path d="M6.5 18.5h11"/>
+                <circle cx="12" cy="14" r="1.25"/>
+              </svg>
+            </div>
+            <h3>Previsibilidade comercial</h3>
+            <p>Indicadores claros para entender a origem dos leads, a velocidade do funil e onde as oportunidades estão sendo perdidas.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="6" height="6" rx="2"/>
+                <rect x="15" y="3" width="6" height="6" rx="2"/>
+                <rect x="9" y="15" width="6" height="6" rx="2"/>
+                <path d="M6 9v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9"/>
+                <path d="M12 13v2"/>
+              </svg>
+            </div>
+            <h3>Marketing e vendas integrados</h3>
+            <p>Campanhas, atendimento, CRM e equipe comercial conectados para que cada lead receba a abordagem certa no tempo certo.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="8"/>
+                <circle cx="12" cy="12" r="3"/>
+                <path d="m16.5 7.5 4-4"/>
+                <path d="M17 3.5h3.5V7"/>
+              </svg>
+            </div>
+            <h3>Demanda mais qualificada</h3>
+            <p>Posicionamento, criativos e mídia orientados ao público com maior aderência ao produto e ao momento de compra.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 19V5"/>
+                <path d="M4 19h16"/>
+                <path d="m7 15 4-4 3 3 5-7"/>
+                <path d="M16 7h3v3"/>
+              </svg>
+            </div>
+            <h3>Conversão acompanhada</h3>
+            <p>Scripts, cadência de follow-up, treinamento e análise contínua para transformar interesse em visitas, propostas e vendas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="como-funciona">
+      <div class="container">
+        <div class="section-heading section-heading--light reveal">
+          <span class="eyebrow eyebrow--light">Como funciona</span>
+          <h2>Três passos para sair do achismo e priorizar o que gera resultado</h2>
+          <p>Uma jornada objetiva para compreender o cenário, definir prioridades e avançar com um plano coerente com o seu empreendimento.</p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card reveal">
+            <span class="process-card__number">01</span>
+            <h3>Preencha o formulário</h3>
+            <p>Conte em poucos minutos o momento do empreendimento e o principal desafio da operação.</p>
+          </article>
+          <article class="process-card reveal">
+            <span class="process-card__number">02</span>
+            <h3>Converse com um especialista</h3>
+            <p>Analisamos contexto, estratégia, captação, atendimento, CRM e indicadores comerciais.</p>
+          </article>
+          <article class="process-card reveal">
+            <span class="process-card__number">03</span>
+            <h3>Receba prioridades claras</h3>
+            <p>Você sai com uma visão objetiva dos gargalos e dos próximos passos que merecem atenção primeiro.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light" id="resultados">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Prova na prática</span>
+          <h2>Resultados já alcançados em diferentes desafios imobiliários</h2>
+          <p>Cases documentados que mostram como estratégia, processo comercial e acompanhamento de performance se traduzem em resultados.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card reveal">
+            <div class="testimonial-card__top">
+              <div class="avatar" aria-hidden="true">VR</div>
+              <div>
+                <strong>Villanova Residence</strong>
+                <span>Lançamento residencial</span>
+              </div>
+            </div>
+            <p>73% das unidades vendidas no pré-lançamento, com VGV de R$ 58 milhões, equipe treinada e geração contínua de leads qualificados.</p>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <div class="testimonial-card__top">
+              <div class="avatar" aria-hidden="true">RS</div>
+              <div>
+                <strong>Residencial Sequoia</strong>
+                <span>Empreendimento premium</span>
+              </div>
+            </div>
+            <p>100% vendido em 12 meses, com mídia orientada por fase, landing pages de alta conversão e funil comercial estruturado.</p>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <div class="testimonial-card__top">
+              <div class="avatar" aria-hidden="true">TC</div>
+              <div>
+                <strong>Torre comercial</strong>
+                <span>Estoque remanescente</span>
+              </div>
+            </div>
+            <p>100% das unidades vendidas em 18 meses, com qualificação de leads, otimização da conversão e mídia paga sustentável.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container faq__layout">
+        <div class="section-heading section-heading--left reveal">
+          <span class="eyebrow">Perguntas frequentes</span>
+          <h2>O que você precisa saber antes de solicitar o diagnóstico</h2>
+          <p>Respostas diretas para as principais dúvidas de construtoras e incorporadoras.</p>
+        </div>
+
+        <div class="accordion reveal" data-accordion>
+          <article class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-1" id="faq-trigger-1">
+                Para quais tipos de empreendimento o diagnóstico é indicado?
+                <span aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-1" role="region" aria-labelledby="faq-trigger-1">
+              <p>Para lançamentos em planejamento, empreendimentos em comercialização, operações com estoque remanescente e empresas que desejam estruturar ou integrar marketing e vendas.</p>
+            </div>
+          </article>
+
+          <article class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-trigger-2">
+                A GR21 substitui a agência ou a equipe comercial?
+                <span aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-2" role="region" aria-labelledby="faq-trigger-2" hidden>
+              <p>O formato depende do cenário. A GR21 pode integrar parceiros e equipes existentes ou assumir frentes estratégicas específicas, sempre com responsabilidades, indicadores e processos bem definidos.</p>
+            </div>
+          </article>
+
+          <article class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-trigger-3">
+                Preciso ter um grande orçamento de mídia?
+                <span aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-3" role="region" aria-labelledby="faq-trigger-3" hidden>
+              <p>Não. O diagnóstico considera produto, praça, público, fase comercial e capacidade de investimento. O objetivo é priorizar eficiência antes de recomendar aumento de verba.</p>
+            </div>
+          </article>
+
+          <article class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-trigger-4">
+                Em quanto tempo os resultados aparecem?
+                <span aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-4" role="region" aria-labelledby="faq-trigger-4" hidden>
+              <p>O prazo varia conforme o estágio da operação, a qualidade da base, o ciclo de compra e a velocidade de implementação. A primeira meta é gerar clareza e corrigir rapidamente os gargalos mais críticos.</p>
+            </div>
+          </article>
+
+          <article class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-trigger-5">
+                O diagnóstico tem custo ou obrigação de contratação?
+                <span aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-5" role="region" aria-labelledby="faq-trigger-5" hidden>
+              <p>Não. A conversa inicial é gratuita e sem compromisso. Caso exista aderência, a GR21 apresenta uma proposta adequada ao desafio e ao nível de atuação necessário.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container final-cta__box reveal">
+        <div>
+          <span class="eyebrow eyebrow--light">Próximo passo</span>
+          <h2>Seu empreendimento pode vender com mais clareza, integração e acompanhamento</h2>
+          <p>Solicite o diagnóstico gratuito e descubra quais gargalos merecem atenção primeiro.</p>
+        </div>
+        <a class="button button--hero" href="#formulario">Quero meu diagnóstico gratuito</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <img src="/gr21-logo.png" alt="GR21" width="150" height="30">
+      <p id="privacidade"><strong>Aviso de privacidade:</strong> os dados enviados neste formulário serão usados exclusivamente para analisar a solicitação e realizar o contato comercial autorizado.</p>
+      <div class="footer__links">
+        <a href="#privacidade">Privacidade e LGPD</a>
+        <a href="/contato">Contato</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

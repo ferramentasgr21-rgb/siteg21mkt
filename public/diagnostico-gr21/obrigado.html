@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Solicitação de diagnóstico GR21 enviada com sucesso.">
+  <meta name="theme-color" content="#1E3A34">
+  <title>Solicitação recebida | GR21</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="thank-you">
+    <section class="thank-you__card">
+      <img src="/gr21-logo.png" alt="GR21" width="180" height="36">
+      <span class="thank-you__icon" aria-hidden="true">✓</span>
+      <p class="eyebrow">Solicitação recebida</p>
+      <h1>Obrigado pelo seu interesse na GR21</h1>
+      <p>Seus dados foram enviados com sucesso. Nossa equipe analisará as informações e entrará em contato para organizar o diagnóstico.</p>
+      <a class="button" href="/diagnostico-gr21/">Voltar para a página</a>
+    </section>
+  </main>
+
+  <script>
+    if (Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({
+        event: "lead_form_success",
+        form_name: "diagnostico-gr21"
+      });
+    }
+
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "generate_lead", {
+        form_name: "diagnostico-gr21"
+      });
+    }
+
+    if (typeof window.fbq === "function") {
+      window.fbq("track", "Lead");
+    }
+  </script>
+</body>
+</html>
