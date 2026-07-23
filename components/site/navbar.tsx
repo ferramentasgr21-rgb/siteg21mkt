@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Menu, X, CalendarCheck } from 'lucide-react';
@@ -35,14 +34,11 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-5">
         <Link href="/" className="flex items-center" aria-label="GR21 - Página inicial">
-          <Image
-            src="/gr21-logo.png"
-            alt="GR21 Aceleradora de Vendas e Marketing Imobiliário"
-            width={180}
-            height={30}
-            priority
-            className="h-8 w-auto md:h-9"
-          />
+        <img
+  src="/gr21-logo.svg"
+  alt="GR21 Aceleradora de Vendas e Marketing Imobiliário"
+  className="h-8 w-auto md:h-9"
+/>
         </Link>
 
         <ul className="hidden items-center gap-1 lg:flex">

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { Mail, Phone, MapPin, Instagram, Linkedin, MessageCircle } from 'lucide-react';
 import { SITE, NAV_LINKS, whatsappLink } from '@/lib/site';
 
@@ -10,13 +9,11 @@ export function Footer() {
       <div className="mx-auto max-w-[1200px] px-5 py-16">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <Image
-              src="/gr21-logo-white.png"
-              alt="GR21"
-              width={180}
-              height={30}
-              className="h-9 w-auto"
-            />
+            <img
+  src="/gr21-logo-white.svg"
+  alt="GR21"
+  className="h-9 w-auto"
+/>
             <p className="mt-5 text-sm leading-relaxed text-white/70">
               Consultoria integrada de marketing e vendas 100% focada no mercado
               imobiliário. Do branding ao pós-venda, aceleramos as vendas do seu

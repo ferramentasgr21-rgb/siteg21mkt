@@ -14,7 +14,7 @@ export function HomeHero() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '25%']);
-  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.72, 0.9]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.48, 0.68]);
 
   return (
     <section ref={ref} className="relative flex min-h-[92vh] items-center overflow-hidden">
@@ -26,9 +26,9 @@ export function HomeHero() {
         <div
           className="h-[120%] w-full"
           style={{
-            backgroundImage: "url('/images/hero-empreendimento.jpg')",
+            backgroundImage: "url('/images/banner-principal-novo.jpg')",
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundPosition: 'center 42%',
           }}
         />
       </motion.div>
@@ -42,7 +42,7 @@ export function HomeHero() {
           className="h-full w-full"
           style={{
             background:
-              'linear-gradient(115deg, rgba(21,42,37,0.96) 0%, rgba(21,42,37,0.82) 45%, rgba(0,168,89,0.35) 100%)',
+  'linear-gradient(115deg, rgba(21,42,37,0.78) 0%, rgba(21,42,37,0.52) 48%, rgba(0,168,89,0.16) 100%)',
           }}
         />
       </motion.div>
