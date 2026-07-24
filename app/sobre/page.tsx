@@ -41,7 +41,7 @@ const PILARES = [
   {
     icon: ShieldCheck,
     title: 'Metodologia validada',
-    desc: 'Nosso método foi testado e refinado em dezenas de empreendimentos, gerando mais de R$ 120 milhões em VGV só em 2025 na região de Maringá.',
+    desc: 'Nosso método foi testado e refinado em diversos empreendimentos, gerando mais de R$ 120 milhões em VGV só em 2025 na região de Maringá.',
   },
 ];
 

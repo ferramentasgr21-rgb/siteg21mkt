@@ -56,18 +56,26 @@ export default function ServicosPage() {
       <section className="py-20 md:py-24">
         <div className="mx-auto max-w-[1200px] px-5">
           <SectionHeading eyebrow="Área comercial" title="Gestão comercial de alta performance" subtitle="Estruturamos e operamos a máquina de vendas do seu empreendimento." />
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {COMERCIAL?.map((s, i) => <ServiceCard key={s?.title} {...s} i={i} />)}
-          </div>
+          <div className="mt-14 flex flex-wrap justify-center gap-6">
+  {COMERCIAL?.map((s, i) => (
+    <div key={s?.title} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+      <ServiceCard {...s} i={i} />
+    </div>
+  ))}
+</div>
         </div>
       </section>
 
       <section className="bg-brand-cream py-20 md:py-24">
         <div className="mx-auto max-w-[1200px] px-5">
           <SectionHeading eyebrow="Área de marketing" title="Marketing imobiliário estratégico" subtitle="Da construção da marca à geração contínua de leads qualificados." />
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {MARKETING?.map((s, i) => <ServiceCard key={s?.title} {...s} i={i} />)}
-          </div>
+          <div className="mt-14 flex flex-wrap justify-center gap-6">
+  {MARKETING?.map((s, i) => (
+    <div key={s?.title} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+      <ServiceCard {...s} i={i} />
+    </div>
+  ))}
+</div>
         </div>
       </section>
 
