@@ -8,11 +8,11 @@ import { CheckCircle2 } from 'lucide-react';
 export const dynamic = 'force-static';
 export const metadata: Metadata = {
   title: 'Resultados',
-  description: 'Mais de R$ 120 milhões em VGV, dezenas de empreendimentos acelerados e resultados mensuráveis.',
+  description: 'Mais de R$ 120 milhões em VGV, diversos empreendimentos acelerados e resultados mensuráveis.',
 };
 
 const CASES = [
-  { img: '/images/case-torre-luxo.jpg', tag: 'Torre Comercial', title: 'Empreendimento comercial de alto padrão', desafio: 'Liquidação de salas remanescentes', resultados: ['100% das unidades vendidas em 18 meses', 'Leads + qualificados gerados', 'Taxa de conversão otimizada', 'ROI de mídia paga sustentável'] },
+  { img: '/images/case-torre-luxo.jpg', tag: 'Torre Comercial', title: 'Empreendimento comercial de alto padrão', desafio: 'Liquidação de salas remanescentes do Le Monde Centro Empresarial', resultados: ['100% das unidades vendidas em 18 meses', 'Leads + qualificados gerados', 'Taxa de conversão otimizada', 'ROI de mídia paga sustentável'] },
   { img: '/images/case-condominio.jpg', tag: 'Lançamento', title: 'Condomínio residencial multifamiliar', desafio: 'Lançamento do Villanova Residence', resultados: ['73% das unidades vendidas em pré-lançamento', 'VGV de R$58 milhões', 'Equipe de vendas treinada', 'Geração contínua de leads qualificados'] },
   { img: '/images/case-aereo.jpg', tag: 'Lançamento', title: 'Empreendimento Premium', desafio: 'Lançamento do Residencial Sequoia', resultados: ['100% vendido em 12 meses', 'Mídia paga otimizada por fase', 'Landing pages de alta conversão', 'Funil comercial estruturado'] },
 ];
@@ -22,7 +22,7 @@ const BENEFICIOS = ['Aumento na geração de leads qualificados', 'Redução no 
 export default function ResultadosPage() {
   return (
     <>
-      <PageHero eyebrow="Resultados que comprovam" title="Números reais. Resultados comprovados." subtitle="Mais de 20 anos de experiência, dezenas de empreendimentos acelerados e centenas de milhões em VGV gerados. Veja por que construtoras confiam na GR21." image="/images/case-aereo.jpg" />
+      <PageHero eyebrow="Resultados que comprovam" title="Números reais. Resultados comprovados." subtitle="Mais de 20 anos de experiência, diversos empreendimentos acelerados e centenas de milhões em VGV gerados. Veja por que construtoras confiam na GR21." image="/images/case-aereo.jpg" />
 
       <section className="bg-brand-cream py-20 md:py-24">
         <div className="mx-auto max-w-[1200px] px-5"><StatsGrid /></div>
