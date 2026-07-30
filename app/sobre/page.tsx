@@ -19,29 +19,29 @@ export const dynamic = 'force-static';
 export const metadata: Metadata = {
   title: 'Sobre',
   description:
-    'A GR21 é um hub de negócios 100% focado no mercado imobiliário, com mais de 20 anos de experiência integrando marketing e vendas.',
+    'A GR21 é um hub de negócios 100% focado no mercado imobiliário, com mais de 10 anos de experiência integrando marketing e vendas.',
 };
 
 const PILARES = [
   {
     icon: Target,
     title: 'Expertise imobiliária',
-    desc: '20+ anos de experiência exclusiva no setor. Conhecemos cada desafio e cada detalhe que faz diferença entre vender 30% ou 100% do empreendimento no primeiro ano.',
+    desc: '+10 anos de experiência exclusiva no setor. Conhecemos cada desafio e cada detalhe que faz diferença entre vender 30% ou 100% do empreendimento no primeiro ano.',
   },
   {
     icon: Zap,
     title: 'Integração total',
-    desc: 'Marketing e vendas operando como uma máquina única. Sem desperdício de leads, sem desconexão estratégica, sem orçamento jogado fora.',
+    desc: 'Marketing e vendas operando como uma máquina única.',
   },
   {
     icon: BarChart3,
     title: 'Resultados mensuráveis',
-    desc: 'Dashboards, KPIs, metas claras. Você acompanha cada real investido e cada resultado gerado. Transparência total, performance comprovada.',
+    desc: 'KPIs, metas claras. Você acompanha cada real investido e cada resultado gerado. Transparência total, performance comprovada.',
   },
   {
     icon: ShieldCheck,
     title: 'Metodologia validada',
-    desc: 'Nosso método foi testado e refinado em diversos empreendimentos, gerando mais de R$ 120 milhões em VGV só em 2025 na região de Maringá.',
+    desc: 'Nosso método foi testado e refinado em diversos empreendimentos.',
   },
 ];
 
@@ -64,7 +64,7 @@ const VALORES = [
   {
     icon: Rocket,
     title: 'Inovação constante',
-    desc: 'Sempre um passo à frente do mercado.',
+    desc: 'Sempre atentos a novidades e tendências do mercado.',
   },
   {
     icon: ShieldCheck,
@@ -84,18 +84,10 @@ export default function SobrePage() {
   return (
     <>
       <PageHero
-        eyebrow="Quem somos"
-        title={
-          <>
-            100% focados no mercado imobiliário.
-            <br />
-            100% dedicados ao seu sucesso.
-          </>
-        }
-        subtitle="A GR21 nasceu da necessidade real do mercado: construtoras e incorporadoras precisavam de um parceiro estratégico que entendesse profundamente o setor e integrasse marketing e vendas em uma operação única."
-        image="/images/equipe-reuniao.jpg"
-      />
-
+  eyebrow="Quem somos"
+  title="100% focados no mercado imobiliário."
+  description="A GR21 nasceu da necessidade real do mercado: construtoras e incorporadoras precisavam de um parceiro estratégico que entendesse profundamente o setor e integrasse marketing e vendas em uma operação única."
+/>
       <section className="py-20 md:py-24">
         <div className="mx-auto grid max-w-[1200px] items-center gap-12 px-5 lg:grid-cols-2">
           <Reveal>
@@ -109,16 +101,15 @@ export default function SobrePage() {
 
             <div className="mt-6 space-y-4 text-brand-dark/75 leading-relaxed">
               <p>
-                Com mais de 20 anos de experiência em gestão comercial e marketing imobiliário,
-                a GR21 é fruto da visão de especialistas que lideraram operações comerciais de
-                grandes construtoras e desenvolveram estratégias que geraram centenas de milhões
-                em VGV.
+                Com mais de 20 anos de experiência em gestão comercial e marketing,
+                a GR21 é fruto da visão de especialistas que lideraram grandes operações
+                comerciais e de marketing.
               </p>
 
               <p>
-                Fundada com o propósito de acelerar vendas e potencializar marcas, a GR21 se
-                tornou referência em consultoria integrada — o hub de negócios que construtoras
-                procuram quando precisam de resultados reais, mensuráveis e sustentáveis.
+                Fundada com o propósito de acelerar vendas e potencializar marcas, a GR21 é
+                um o hub de negócios que incorporadoras procuram quando precisam de resultados
+                reais, mensuráveis e sustentáveis.
               </p>
             </div>
           </Reveal>
@@ -240,11 +231,12 @@ export default function SobrePage() {
                   Nossa localização
                 </h3>
 
-                <p className="mt-2 text-brand-dark/75">
-                  Avenida Carneiro Leão, 563 | Sala 1508 — Maringá - PR | CEP:
-                  87014-010
-                </p>
-
+                <<p className="mt-2 text-brand-dark/75">
+  <span className="block">Le Monde Centro Empresarial</span>
+  <span className="block">
+    Avenida Carneiro Leão, 563 | Sala 1508 — Maringá - PR | CEP: 87014-010
+  </span>
+</p>
                 <p className="mt-1 text-sm text-brand-dark/60">
                   Atendemos construtoras e incorporadoras em todo o Brasil, com base
                   estratégica no Paraná.
@@ -255,7 +247,7 @@ export default function SobrePage() {
         </div>
       </section>
 
-      <CtaBand title="Vamos construir o sucesso do seu empreendimento juntos?" />
+      <CtaBand title="Vamos construir o sucesso da sua incorporadora juntos?" />
     </>
   );
 }
