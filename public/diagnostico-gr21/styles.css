@@ -1478,8 +1478,6 @@ form {
   }
 }
 
-
-/* Aviso exibido somente durante testes no servidor local. */
 .form-status.is-info {
   color: var(--cor-secundaria);
   background: var(--cor-fundo-suave);
