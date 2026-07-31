@@ -12,17 +12,58 @@ export const metadata: Metadata = {
 };
 
 const CASES = [
-  { img: '/images/case-torre-luxo.jpg', tag: 'Torre Comercial', title: 'Empreendimento comercial de alto padrão', desafio: 'Liquidação de salas remanescentes do Le Monde Centro Empresarial', resultados: ['100% das unidades vendidas em 18 meses', 'Leads + qualificados gerados', 'Taxa de conversão otimizada', 'ROI de mídia paga sustentável'] },
-  { img: '/images/case-condominio.jpg', tag: 'Lançamento', title: 'Condomínio residencial multifamiliar', desafio: 'Lançamento do Villanova Residence', resultados: ['73% das unidades vendidas em pré-lançamento', 'VGV de R$58 milhões', 'Equipe de vendas treinada', 'Geração contínua de leads qualificados'] },
-  { img: '/images/case-aereo.jpg', tag: 'Lançamento', title: 'Empreendimento Premium', desafio: 'Lançamento do Residencial Sequoia', resultados: ['100% vendido em 12 meses', 'Mídia paga otimizada por fase', 'Landing pages de alta conversão', 'Funil comercial estruturado'] },
+  {
+    img: '/images/case-torre-luxo.jpg',
+    tag: 'Empreendimento Comercial de Alto Padrão',
+    title: 'Gestão de Estoque Remanescente',
+    desafio: (
+      <>
+        Liquidação de 31 salas remanescentes do{' '}
+        <strong className="font-semibold text-brand-dark">
+          Le Monde Centro Empresarial
+        </strong>{' '}
+        em Maringá
+      </>
+    ),
+    resultados: [
+      '100% das unidades vendidas em 18 meses',
+      'Leads + qualificados gerados',
+      '9 corretores autônomos engajados',
+      '16 imobiliárias envolvidas',
+    ],
+  },
+  {
+    img: '/images/case-condominio.jpg',
+    tag: 'Lançamento',
+    title: 'Complexo Villanova',
+    desafio: 'Atingir a meta de 70% vendido no pré-lançamento',
+    resultados: [
+      '73% das unidades vendidas em pré-lançamento',
+      'VGV de R$58 milhões',
+      '48 corretores efetivaram vendas',
+      '17 imobiliárias engajadas no lançamento',
+    ],
+  },
+  {
+    img: '/images/case-aereo.jpg',
+    tag: 'Lançamento',
+    title: 'Residencial Sequoia',
+    desafio: 'Vender 100% das unidades através de corretores parceiros',
+    resultados: [
+      '100% vendido em 12 meses',
+      '+200 corretores engajados no lançamento',
+      'Otimização do CRM de vendas',
+      '3 campanhas de vendas',
+    ],
+  },
 ];
 
-const BENEFICIOS = ['Aumento na geração de leads qualificados', 'Redução no tempo médio de venda', 'Melhora na taxa de conversão do funil', 'ROI médio de mídia paga sustentável', 'Aproveitamento da base de leads', 'Equipe comercial mais produtiva com processo padronizado'];
+const BENEFICIOS = ['Equipe comercial mais produtiva com processo padronizado', 'Processos de vendas e marketing bem definidos', 'Redução no tempo médio de venda', 'Melhora na taxa de conversão do funil', 'ROI médio de mídia paga sustentável', 'Aproveitamento da base de leads'];
 
 export default function ResultadosPage() {
   return (
     <>
-      <PageHero eyebrow="Resultados que comprovam" title="Números reais. Resultados comprovados." subtitle="Mais de 20 anos de experiência, diversos empreendimentos acelerados e centenas de milhões em VGV gerados. Veja por que construtoras confiam na GR21." image="/images/case-aereo.jpg" />
+      <PageHero eyebrow="Resultados que comprovam" title="Números reais. Resultados comprovados." subtitle="Mais de 20 anos de experiência, diversos empreendimentos acelerados e centenas de milhões em VGV gerados. Veja por que incorporadoras confiam na GR21."/>
 
       <section className="bg-brand-cream py-20 md:py-24">
         <div className="mx-auto max-w-[1200px] px-5"><StatsGrid /></div>
@@ -30,7 +71,7 @@ export default function ResultadosPage() {
 
       <section className="py-20 md:py-24">
         <div className="mx-auto max-w-[1200px] px-5">
-          <SectionHeading eyebrow="Cases de sucesso" title="Empreendimentos que aceleramos" subtitle="Desafios reais transformados em resultados mensuráveis." />
+          <SectionHeading eyebrow="Cases de sucesso" title=" Veja por que incorporadoras confiam na GR21" subtitle="" />
           <div className="mt-14 space-y-8">
             {CASES?.map((c, i) => (
               <Reveal key={c?.title} delay={0.05}>
@@ -73,7 +114,7 @@ export default function ResultadosPage() {
         </div>
       </section>
 
-      <CtaBand title="Quer resultados assim no seu empreendimento?" subtitle="Agende um diagnóstico gratuito e comece a acelerar suas vendas." />
+      <CtaBand title="Quer resultados assim no seu incorporadora?" subtitle="Agende um diagnóstico gratuito e comece a acelerar suas vendas." />
     </>
   );
 }

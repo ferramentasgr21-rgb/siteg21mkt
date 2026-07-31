@@ -90,7 +90,7 @@ export function Footer() {
                 <span>
                   {SITE.address.line1}
                   <br />
-                  {SITE.address.line2}
+                  {SITE.address.line2} Le Monde Centro Empresarial
                 </span>
               </li>
             </ul>
