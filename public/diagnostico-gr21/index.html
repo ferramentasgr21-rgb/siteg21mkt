@@ -130,9 +130,20 @@
             </div>
 
             <div class="field field--checkbox">
-              <label class="checkbox-label" for="consentimento">
-                <input type="checkbox" id="consentimento" name="consentimento_lgpd" value="Autorizado" required aria-describedby="erro-consentimento">
-                <span>Concordo com o uso dos meus dados para contato comercial, conforme a <a href="#privacidade">Política de Privacidade</a>.</span>
+              <label class="form-consent">
+  <input
+    class="form-consent__input"
+    type="checkbox"
+    name="aceite"
+    required
+  >
+
+  <span class="form-consent__text">
+    Aceito receber contato da GR21 via e-mail e WhatsApp para tratar sobre
+    diagnóstico, consultoria e oportunidades relacionadas a minha incorporadora.
+  </span>
+</label>
+<span>Concordo com o uso dos meus dados para contato comercial, conforme o <a href="#privacidade">Aviso de Privacidade</a>.</span>
               </label>
               <span class="field__error" id="erro-consentimento" data-error-for="consentimento" aria-live="polite"></span>
             </div>

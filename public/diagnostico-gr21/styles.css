@@ -1882,3 +1882,55 @@ form {
     display: none;
   }
 }
+/* ==========================================================================
+   AJUSTE MOBILE - CHECKBOX DE ACEITE
+   ========================================================================== */
+
+.form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 18px 20px;
+  border: 1px solid rgba(20, 61, 52, 0.14);
+  border-radius: 20px;
+  background: rgba(247, 250, 246, 0.92);
+  color: var(--cor-texto);
+  cursor: pointer;
+}
+
+.form-consent__input {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  margin-top: 3px;
+  accent-color: var(--cor-primaria);
+  cursor: pointer;
+}
+
+.form-consent__text {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(20, 61, 52, 0.78);
+}
+
+@media (max-width: 640px) {
+  .form-consent {
+    gap: 16px;
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .form-consent__input {
+    width: 28px;
+    height: 28px;
+    margin-top: 2px;
+  }
+
+  .form-consent__text {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+}
