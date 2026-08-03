@@ -12,18 +12,18 @@ export const metadata: Metadata = {
 };
 
 const TEAM = [
-  { img: '/images/rafael-zanim.jpg', name: 'Rafael Zanim', role: 'CMO & Founder', bio: 'Mais de 20 anos em gestão comercial e marketing, com atuação estratégica na comunicação de grandes empresas e no mercado imobiliário.', items: ['20+ anos de experiência', 'Estratégia comercial imobiliária', 'Liderança em grandes empresas', 'Operações de +R$ 500 milhões em VGV'], email: SITE.email, phone: SITE.phoneDisplay },
-  { img: '/images/pedro-carneiro.jpg', name: 'Pedro Carneiro', role: 'Gestor de Marketing', bio: 'Especialista em planejamento e execução de estratégias de marketing digital e branding para o mercado imobiliário.', items: ['Planejamento estratégico 360°', 'Mídia paga (Google, Meta, portais)', 'Branding de empreendimentos', 'Lançamentos e ações institucionais'] },
-  { img: '/images/beatriz-lessa.jpg', name: 'Beatriz Lessa', role: 'Gestora de Redes Sociais', bio: 'Criadora de conteúdo estratégico e gestora de presença digital, especialista em engajamento e storytelling.', items: ['Gestão completa de redes sociais', 'Planejamento e calendário editorial', 'Campanhas de engajamento', 'Monitoramento de métricas'] },
-  { img: '/images/eloisa-belan.jpg', name: 'Eloisa Belan', role: 'Inteligência de Mercado', bio: 'Analista especializada em pesquisa de mercado, análise de concorrência e inteligência competitiva.', items: ['Estudos de viabilidade e mercado', 'Pesquisa de público e personas', 'Análise de concorrência', 'Relatórios para decisão estratégica'] },
-  { img: '/images/leonardo-reis.jpg', name: 'Leonardo Reis', role: 'Criação e Design', bio: 'Designer especializado em comunicação visual para o mercado imobiliário, de identidades a materiais de venda.', items: ['Identidade visual de marcas', 'Materiais de venda e books', 'Peças publicitárias', 'Enxoval de comunicação'] },
-  { img: '/images/matheus-arcanjo.jpg', name: 'Matheus Arcanjo', role: 'Gestor de Tráfego', bio: 'Fundador @carbon.aceleradora. Faz parte da rede de parceiros da GR21. Especialista em mídia paga e performance digital, focado em gerar leads qualificados e otimizar ROI.', items: ['Campanhas Google e Meta Ads', 'Otimização de conversão e CAC', 'Testes de audiências e criativos', 'Análise de dados e relatórios'] },
+  { img: '/images/rafael-zanim.jpg', name: 'Rafael Zanim', role: 'Founder', bio: 'Mais de 20 anos em gestão comercial e marketing, com atuação estratégica na comunicação de grandes empresas e no mercado imobiliário.', items: ['20+ anos de experiência', 'Estratégia comercial imobiliária', 'Liderança em grandes empresas'], email: SITE.email, phone: SITE.phoneDisplay },
+  { img: '/images/pedro-carneiro.jpg', name: 'Pedro Carneiro', role: 'Gestor de Marketing', bio: 'Especialista em planejamento e execução de estratégias de marketing digital e branding para o mercado imobiliário.', items: ['Planejamento estratégico 360°', 'Branding de empreendimentos', 'Lançamentos e ações institucionais'] },
+  { img: '/images/beatriz-lessa.jpg', name: 'Beatriz Lessa', role: 'Gestora de Redes Sociais', bio: 'Criadora de conteúdo estratégico e gestora de presença digital, especialista em engajamento e storytelling.', items: ['Gestão completa de redes sociais', 'Planejamento e calendário editorial', 'Campanhas de engajamento'] },
+  { img: '/images/eloisa-belan.jpg', name: 'Eloisa Belan', role: 'Criação de Vídeos', bio: 'Responsável por transformar estratégia em comunicação e conteúdo audiovisual.', items: ['Captação e edição de vídeos', 'Animação de renders com I.A.s', 'Vídeos de I.A.', 'Relatórios para decisão estratégica'] },
+  { img: '/images/leonardo-reis.jpg', name: 'Leonardo Reis', role: 'Criação e Design', bio: 'Designer especializado em comunicação visual para o mercado imobiliário, de identidades a materiais de venda.', items: ['Identidade visual de marcas', 'Materiais de venda e books', 'Enxoval de comunicação'] },
+  { img: '/images/matheus-arcanjo.jpg', name: 'Matheus Arcanjo', role: 'Gestor de Tráfego', bio: 'Fundador @carbon.aceleradora. Faz parte da rede de parceiros da GR21. Especialista em mídia paga e performance digital.', items: ['Campanhas Google e Meta Ads', 'Otimização de conversão e CAC', 'Análise de dados e relatórios'] },
 ];
 
 export default function EquipePage() {
   return (
     <>
-      <PageHero eyebrow="Nossa equipe" title="Especialistas que vivem e respiram mercado imobiliário" subtitle="Nossa equipe reúne profissionais com décadas de experiência combinada em marketing, vendas, inteligência de mercado e gestão comercial no setor imobiliário." image="/images/equipe-reuniao.jpg" />
+      <PageHero eyebrow="Nossa equipe" title="Especialistas que vivem e respiram mercado imobiliário" subtitle="Nossa equipe reúne profissionais com décadas de experiência combinada em marketing, vendas, inteligência de mercado e gestão comercial no setor imobiliário."/>
 
       <section className="py-20 md:py-24">
         <div className="mx-auto max-w-[1200px] px-5">
@@ -66,16 +66,16 @@ export default function EquipePage() {
 
       <section className="bg-brand-cream py-20 md:py-24">
         <div className="mx-auto max-w-[1200px] px-5">
-          <SectionHeading eyebrow="Nossa cultura" title="Trabalhe com propósito. Cresça com resultado." subtitle="Acreditamos que o sucesso vem da união entre expertise técnica, paixão pelo que fazemos e compromisso com resultados." />
+          <SectionHeading eyebrow="Nossa cultura" title="Trabalhe com propósito. Cresça com resultado." subtitle="" />
           <div className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-3">
-            {['Excelência em tudo que fazemos', 'Aprendizado contínuo', 'Trabalho em equipe', 'Foco no cliente', 'Transparência e ética'].map((v) => (
+            {['Estrutura inteligente', 'Pessoas no centro', 'Resultados Reais', 'Transparência e ética'].map((v) => (
               <span key={v} className="rounded-full border border-brand-mist bg-white px-5 py-2 text-sm font-medium text-brand-dark">{v}</span>
             ))}
           </div>
         </div>
       </section>
 
-      <CtaBand title="Vamos conversar sobre seu empreendimento?" />
+      <CtaBand title="Vamos conversar sobre sua incorporadora?" />
     </>
   );
 }

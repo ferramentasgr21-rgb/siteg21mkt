@@ -15,7 +15,7 @@ export default function ContatoPage() {
   const mapsQuery = encodeURIComponent('Avenida Carneiro Leão, 563, Maringá - PR, 87014-010');
   return (
     <>
-      <PageHero eyebrow="Fale conosco" title="Vamos acelerar as vendas do seu empreendimento?" subtitle="Agende um diagnóstico gratuito ou entre em contato para tirar suas dúvidas. Estamos prontos para transformar seu empreendimento em sucesso de vendas." />
+      <PageHero eyebrow="Fale conosco" title="Vamos acelerar as vendas da sua incorporadora?" subtitle="Agende um diagnóstico gratuito ou entre em contato para tirar suas dúvidas. Estamos prontos para transformar seu empreendimento em sucesso de vendas." />
 
       <section className="py-20 md:py-24">
         <div className="mx-auto grid max-w-[1200px] gap-12 px-5 lg:grid-cols-[1fr_1.3fr]">
@@ -35,7 +35,7 @@ export default function ContatoPage() {
           <Reveal delay={0.15}>
             <div className="rounded-2xl border border-brand-mist bg-white p-7 shadow-sm md:p-9">
               <h2 className="font-display text-2xl font-bold text-brand-dark">Agende seu diagnóstico gratuito</h2>
-              <p className="mt-2 text-sm text-brand-dark/60">Preencha o formulário e retornaremos em até 24 horas úteis.</p>
+              <p className="mt-2 text-sm text-brand-dark/60">Preencha o formulário e retornaremos.</p>
               <div className="mt-7"><ContactForm /></div>
             </div>
           </Reveal>

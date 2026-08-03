@@ -6,14 +6,13 @@ import { TrendingUp, Building2, Handshake, Award } from 'lucide-react';
 
 const STATS = [
   { icon: TrendingUp, prefix: '+R$ ', value: 120, suffix: 'M', label: 'VGV em gestão 2025 — Maringá' },
-  { icon: Building2, prefix: '', value: 4, suffix: '', label: 'Empreendimentos em gestão completa' },
   { icon: Handshake, prefix: '+', value: 40, suffix: '', label: 'Imobiliárias parceiras ativas' },
-  { icon: Award, prefix: '+', value: 20, suffix: '', label: 'Anos de experiência no mercado' },
+  { icon: Award, prefix: '+', value: 19, suffix: '', label: 'Projetos acelerados no BR' },
 ];
 
 export function StatsGrid({ dark = false }: { dark?: boolean }) {
   return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="mx-auto mt-12 grid w-full max-w-[960px] grid-cols-1 gap-6 md:grid-cols-3">
       {STATS?.map((stat, i) => {
         const Icon = stat?.icon;
         return (
