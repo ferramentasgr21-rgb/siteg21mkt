@@ -7,7 +7,7 @@ import { TrendingUp, Building2, Handshake, Award } from 'lucide-react';
 const STATS = [
   { icon: TrendingUp, prefix: '+R$ ', value: 120, suffix: 'M', label: 'VGV em gestão 2025 — Maringá' },
   { icon: Handshake, prefix: '+', value: 40, suffix: '', label: 'Imobiliárias parceiras ativas' },
-  { icon: Award, prefix: '+', value: 20, suffix: '', label: 'Anos de experiência no mercado' },
+  { icon: Award, prefix: '+', value: 19, suffix: '', label: 'Projetos acelerados no BR' },
 ];
 
 export function StatsGrid({ dark = false }: { dark?: boolean }) {
