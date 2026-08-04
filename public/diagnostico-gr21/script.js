@@ -40,7 +40,7 @@ const errorMessages = {
   emailRequired: "Informe seu e-mail profissional.",
   emailInvalid: "Digite um e-mail válido.",
   whatsappRequired: "Informe seu WhatsApp.",
-  whatsappInvalid: "Digite um WhatsApp com DDD no formato (XX) XXXXX-XXXX.",
+  whatsappInvalid: "Informe um WhatsApp válido com DDD.",
   desafio: "Selecione o principal desafio.",
   aceite: "É necessário autorizar o contato para continuar.",
 };
@@ -132,7 +132,7 @@ function validateForm() {
   if (!values.whatsapp) {
     setFieldError("whatsapp", errorMessages.whatsappRequired);
     isValid = false;
-  } else if (onlyDigits(values.whatsapp).length !== 11) {
+  } else if (onlyDigits(values.whatsapp).length < 10 || onlyDigits(values.whatsapp).length > 11) {
     setFieldError("whatsapp", errorMessages.whatsappInvalid);
     isValid = false;
   } else {
@@ -279,10 +279,8 @@ form?.addEventListener("submit", async (event) => {
    * O envio real deve ser validado na URL publicada pelo Netlify.
    */
   if (isLocalEnvironment()) {
-    showFormStatus(
-      "info",
-      "Os campos estão válidos. O envio pelo Netlify Forms poderá ser testado após o próximo deploy no Netlify."
-    );
+    console.log("GR21: ambiente local detectado, redirecionando para obrigado.");
+    window.location.assign("/diagnostico-gr21/obrigado.html");
     return;
   }
 
