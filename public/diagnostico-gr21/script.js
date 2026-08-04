@@ -32,7 +32,7 @@ const fields = {
   email: document.querySelector("#email"),
   whatsapp: whatsappInput,
   desafio: document.querySelector("#desafio"),
-  consentimento: document.querySelector("#consentimento"),
+  aceite: document.querySelector("#aceite"),
 };
 
 const errorMessages = {
@@ -40,9 +40,9 @@ const errorMessages = {
   emailRequired: "Informe seu e-mail profissional.",
   emailInvalid: "Digite um e-mail válido.",
   whatsappRequired: "Informe seu WhatsApp.",
-  whatsappInvalid: "Digite um WhatsApp com DDD no formato (XX) XXXXX-XXXX.",
+  whatsappInvalid: "Informe um WhatsApp válido com DDD.",
   desafio: "Selecione o principal desafio.",
-  consentimento: "É necessário autorizar o contato para continuar.",
+  aceite: "É necessário autorizar o contato para continuar.",
 };
 
 const trackingFields = {
@@ -107,12 +107,12 @@ function validateForm() {
     email: fields.email?.value.trim() ?? "",
     whatsapp: fields.whatsapp?.value.trim() ?? "",
     desafio: fields.desafio?.value ?? "",
-    consentimento: Boolean(fields.consentimento?.checked),
+    aceite: "É necessário autorizar o contato para continuar.",
   };
 
   let isValid = true;
 
-  if (values.nome.length < 3 || !values.nome.includes(" ")) {
+  if (values.nome.length < 2) {
     setFieldError("nome", errorMessages.nome);
     isValid = false;
   } else {
@@ -132,7 +132,7 @@ function validateForm() {
   if (!values.whatsapp) {
     setFieldError("whatsapp", errorMessages.whatsappRequired);
     isValid = false;
-  } else if (onlyDigits(values.whatsapp).length !== 11) {
+  } else if (onlyDigits(values.whatsapp).length < 10 || onlyDigits(values.whatsapp).length > 11) {
     setFieldError("whatsapp", errorMessages.whatsappInvalid);
     isValid = false;
   } else {
@@ -146,11 +146,11 @@ function validateForm() {
     setFieldError("desafio");
   }
 
-  if (!values.consentimento) {
-    setFieldError("consentimento", errorMessages.consentimento);
-    isValid = false;
-  } else {
-    setFieldError("consentimento");
+  if (!values.aceite) {
+  setFieldError("aceite", errorMessages.aceite);
+  isValid = false;
+} else {
+  setFieldError("aceite");
   }
 
   return { isValid, values };
@@ -279,10 +279,8 @@ form?.addEventListener("submit", async (event) => {
    * O envio real deve ser validado na URL publicada pelo Netlify.
    */
   if (isLocalEnvironment()) {
-    showFormStatus(
-      "info",
-      "Os campos estão válidos. O envio pelo Netlify Forms poderá ser testado após o próximo deploy no Netlify."
-    );
+    console.log("GR21: ambiente local detectado, redirecionando para obrigado.");
+    window.location.assign("/diagnostico-gr21/obrigado.html");
     return;
   }
 

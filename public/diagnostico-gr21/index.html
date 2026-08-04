@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=20260804-9">
+<script src="./script.js?v=20260804-9" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo-principal">Ir para o conteúdo principal</a>
@@ -117,38 +117,46 @@
             </div>
 
             <div class="field">
-              <label for="desafio">Qual é o principal desafio hoje?</label>
-              <select id="desafio" name="desafio" required aria-describedby="erro-desafio">
-                <option value="">Selecione seu principal desafio</option>
-                <option value="lancamento-planejamento">Lançamento em planejamento</option>
-                <option value="empreendimento-em-vendas">Empreendimento em comercialização</option>
-                <option value="estoque-remanescente">Estoque remanescente</option>
-                <option value="estruturacao-operacao">Estruturação de marketing e vendas</option>
-                <option value="outro">Outro desafio</option>
-              </select>
-              <span class="field__error" id="erro-desafio" data-error-for="desafio" aria-live="polite"></span>
-            </div>
+  <label for="desafio">Qual é o principal desafio hoje?</label>
+  <select id="desafio" name="desafio" required aria-describedby="erro-desafio">
+    <option value="">Selecione seu principal desafio</option>
+    <option value="lancamento-planejamento">Lançamento em planejamento</option>
+    <option value="empreendimento-em-vendas">Empreendimento em comercialização</option>
+    <option value="estoque-remanescente">Estoque remanescente</option>
+    <option value="estruturacao-operacao">Estruturação de marketing e vendas</option>
+    <option value="outro">Outro desafio</option>
+  </select>
+  <span class="field__error" id="erro-desafio" data-error-for="desafio" aria-live="polite"></span>
+</div>
 
-            <div class="field field--checkbox">
-              <label class="form-consent">
-  <input
-    class="form-consent__input"
-    type="checkbox"
-    name="aceite"
-    required
-  >
+<div class="field field--checkbox">
+  <label class="form-consent" for="aceite">
+    <span class="form-consent__control">
+      <input
+        class="form-consent__input"
+        type="checkbox"
+        id="aceite"
+        name="aceite"
+        value="Sim"
+        required
+        aria-describedby="erro-aceite"
+      >
+      <span class="form-consent__box" aria-hidden="true"></span>
+    </span>
 
-  <span class="form-consent__text">
-    Aceito receber contato da GR21 via e-mail e WhatsApp para tratar sobre
-    diagnóstico, consultoria e oportunidades relacionadas a minha incorporadora.
-  </span>
-</label>
-<span>Concordo com o uso dos meus dados para contato comercial, conforme o <a href="#privacidade">Aviso de Privacidade</a>.</span>
-              </label>
-              <span class="field__error" id="erro-consentimento" data-error-for="consentimento" aria-live="polite"></span>
-            </div>
+    <span class="form-consent__content">
+      <strong>Autorizo o contato da GR21</strong>
+      <span>
+        Aceito receber contato via e-mail e WhatsApp para tratar sobre diagnóstico,
+        consultoria e oportunidades relacionadas à minha incorporadora, conforme o
+        <a href="#privacidade">Aviso de Privacidade</a>.
+      </span>
+    </span>
+  </label>
 
-            <button class="button button--submit" type="submit" id="submit-button">
+  <span class="field__error" id="erro-aceite" data-error-for="aceite" aria-live="polite"></span>
+</div>
+<button class="button button--submit" type="submit" id="submit-button">
               <span class="button__text">Solicitar diagnóstico gratuito</span>
               <span class="button__loader" aria-hidden="true"></span>
             </button>
@@ -271,7 +279,7 @@
       </div>
     </section>
 
-    <<section class="section section--light" id="resultados">
+    <section class="section section--light" id="resultados">
   <div class="container">
     <div class="section-heading reveal">
       <span class="eyebrow">Prova na prática</span>
@@ -411,3 +419,4 @@
 </a>
 </body>
 </html>
+
