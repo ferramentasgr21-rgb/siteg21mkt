@@ -18,7 +18,7 @@ const NETLIFY_SUBMIT_URL = "/";
  * false: mostra a confirmação dentro da própria landing page.
  * true: redireciona para /diagnostico-gr21/obrigado.html após o envio.
  */
-const REDIRECT_AFTER_SUCCESS = false;
+const REDIRECT_AFTER_SUCCESS = true;
 const THANK_YOU_URL = "/diagnostico-gr21/obrigado.html";
 
 const form = document.querySelector("#lead-form");
@@ -303,21 +303,14 @@ form?.addEventListener("submit", async (event) => {
       throw new Error(`Falha no envio: ${response.status}`);
     }
 
-    trackSuccessfulLead();
+   trackSuccessfulLead();
 
-    form.reset();
-    hydrateCampaignTracking();
-    Object.keys(fields).forEach((fieldName) => setFieldError(fieldName));
+form.reset();
+hydrateCampaignTracking();
+Object.keys(fields).forEach((fieldName) => setFieldError(fieldName));
 
-    if (REDIRECT_AFTER_SUCCESS) {
-      window.location.assign(THANK_YOU_URL);
-      return;
-    }
-
-    showFormStatus(
-      "success",
-      "Solicitação enviada com sucesso. A equipe da GR21 entrará em contato para organizar o diagnóstico."
-    );
+window.location.assign(THANK_YOU_URL);
+return;
   } catch (error) {
     console.error("Erro ao enviar formulário:", error);
 
