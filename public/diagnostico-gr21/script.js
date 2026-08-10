@@ -303,13 +303,30 @@ form?.addEventListener("submit", async (event) => {
       throw new Error(`Falha no envio: ${response.status}`);
     }
 
-   trackSuccessfulLead();
+ trackSuccessfulLead();
+
+window.dataLayer = window.dataLayer || [];
+
+window.dataLayer.push({
+  event: "gr21_generate_lead",
+  form_name: "diagnostico_gr21",
+  lead_source: "landing_page",
+  lead_type: "form_submit",
+  page_type: "form_submit_success",
+  eventCallback: function () {
+    window.location.assign("/diagnostico-gr21/obrigado.html");
+  },
+  eventTimeout: 1500,
+});
+
+window.setTimeout(() => {
+  window.location.assign("/diagnostico-gr21/obrigado.html");
+}, 1600);
 
 form.reset();
 hydrateCampaignTracking();
 Object.keys(fields).forEach((fieldName) => setFieldError(fieldName));
 
-window.location.assign(THANK_YOU_URL);
 return;
   } catch (error) {
     console.error("Erro ao enviar formulário:", error);
