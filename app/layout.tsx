@@ -65,7 +65,7 @@ twitter: {
     images: ['/og-image.png'],
   },
   other: {
-    'facebook-domain-verification': 'gidluozzvr0l9cc9ny3fwo6jf6lxud',
+    'facebook-domain-verification': 'pvr7ewo98hm4xsuvyhk2f1gp0bn8gp',
   },
 };
 
