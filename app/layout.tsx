@@ -58,11 +58,14 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
+twitter: {
     card: 'summary_large_image',
     title: 'GR21 | Aceleradora de Vendas e Marketing Imobiliário',
     description: SITE.description,
     images: ['/og-image.png'],
+  },
+  other: {
+    'facebook-domain-verification': 'gidluozzvr0l9cc9ny3fwo6jf6lxud',
   },
 };
 
