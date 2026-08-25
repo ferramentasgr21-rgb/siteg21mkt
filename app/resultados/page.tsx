@@ -27,7 +27,7 @@ const CASES = [
     ),
     resultados: [
       '100% das unidades vendidas em 18 meses',
-      'Leads mais qualificados gerados',
+      'Geração de leads qualificados',
       '9 corretores autônomos engajados',
       '16 imobiliárias envolvidas',
     ],

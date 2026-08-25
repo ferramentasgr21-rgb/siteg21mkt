@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const COMERCIAL = [
   { icon: ClipboardList, title: 'Planejamento e gestão de vendas', result: 'Operação comercial estruturada, previsível e escalável.', items: ['Planejamento estratégico de vendas', 'Estrutura comercial completa', 'Análise do ciclo de vendas', 'Previsão de vendas e receita', 'Metas e indicadores (KPIs)'] },
-  { icon: Building, title: 'Estrutura e processos comerciais', result: 'Time comercial profissional, engajado e com clareza de papéis.', items: ['Estrutura física e equipamentos', 'Formato de atuação (in-house, terceirizado, híbrido)', 'Cargos, salários e remuneração', 'Quadro pessoal comercial', 'Gestão de contratos e parcerias'] },
+  { icon: Building, title: 'Estrutura e processos comerciais', result: 'Time comercial profissional, engajado e com clareza de papéis.', items: ['Estrutura física e equipamentos', 'Formato de atuação (in-house, terceirizado, híbrido)', 'Cargos, salários e remuneração', 'Quadro de pessoal comercial', 'Gestão de contratos e parcerias'] },
   { icon: Cpu, title: 'Ferramentas e tecnologia de vendas', result: 'Controle total da operação com tecnologia de ponta.', items: ['Análise e implantação de CRM', 'Suporte na implantação de ERP', 'Automação do atendimento', 'Tabela de vendas e prazos'] },
   { icon: Rocket, title: 'Estratégia e execução de vendas', result: 'Equipe alinhada, motivada e vendendo com processo claro.', items: ['Estratégia por perfil de cliente', 'Upsell', 'Ações para parceiros e imobiliárias', 'Regulamento de campanhas', 'Treinamento do processo comercial'] },
   { icon: HeartHandshake, title: 'Pós-venda e relacionamento', result: 'Clientes satisfeitos que viram embaixadores da marca.', items: ['Estratégia de pós-venda', 'Jornada do cliente após a compra', 'Programas de fidelização', 'NPS e pesquisa de satisfação', 'Base preparada para novos lançamentos'] },
@@ -27,7 +27,7 @@ const MARKETING = [
 
 const MODELOS = [
   { num: '➲', title: 'Consultoria Estratégica', desc: 'Ideal para incorporadoras que possuem equipe interna e precisam de direcionamento estratégico, processos e metodologia.' },
-  { num: '➲', title: 'Gestão Integrada', tag: 'Mais completo', desc: 'Assumimos a operação de marketing e vendas do sua incorporadora, atuando como seu departamento comercial externo. Do planejamento à execução, do primeiro lead ao pós-venda.' },
+  { num: '➲', title: 'Gestão Integrada', tag: 'Mais completo', desc: 'Assumimos a operação de marketing e vendas da sua incorporadora, atuando como seu departamento comercial externo. Do planejamento à execução, do primeiro lead ao pós-venda.' },
   { num: '➲', title: 'Projetos Pontuais', desc: 'Lançamento de produto, reposicionamento de marca, campanha específica ou implantação de CRM. Atuamos conforme sua necessidade.' },
 ];
 
@@ -55,7 +55,7 @@ export default function ServicosPage() {
 
       <section className="py-20 md:py-24">
         <div className="mx-auto max-w-[1200px] px-5">
-          <SectionHeading eyebrow="Área comercial" title="Gestão comercial de alta performance" subtitle="Estruturamos e operamos a máquina de vendas do sua incorporadora." />
+          <SectionHeading eyebrow="Área comercial" title="Gestão comercial de alta performance" subtitle="Estruturamos e operamos a máquina de vendas da sua incorporadora." />
           <div className="mt-14 flex flex-wrap justify-center gap-6">
   {COMERCIAL?.map((s, i) => (
     <div key={s?.title} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">

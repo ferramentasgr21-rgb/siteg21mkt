@@ -19,7 +19,7 @@ const PROBLEMS = [
 
 const DIFERENCIAIS = [
   { icon: Target, title: 'Estratégia 100% focada no imobiliário', items: ['Mais de 10 anos de experiência exclusiva no setor', 'Conhecimento profundo das dores e oportunidades', 'Metodologia testada em diversos empreendimentos'] },
-  { icon: Settings2, title: 'Marketing + Vendas = uma só operação', items: ['Fim da desconexão entre marketing e comercial', 'Processos integrados que maximizam conversão', 'CRM, scripts, treinamento e acompanhamento'] },
+  { icon: Settings2, title: 'Marketing + Vendas = uma só operação', items: ['Fim da desconexão entre marketing e comercial', 'Processos integrados que maximizam a conversão', 'CRM, scripts, treinamento e acompanhamento'] },
   { icon: LineChart, title: 'Resultados mensuráveis e previsíveis', items: ['KPIs de resultado e performance', 'Metas claras e acompanhamento de performance', 'Otimização constante baseada em dados'] },
 ];
 
