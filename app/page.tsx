@@ -11,7 +11,7 @@ import {
 export const dynamic = 'force-static';
 
 const PROBLEMS = [
-  { icon: Unplug, title: 'Marketing e comercial desconectados', desc: 'Marketing  e comercial integrados desde a concepção do produto.' },
+  { icon: Unplug, title: 'Marketing e vendas desconectados', desc: 'Marketing e vendas sem integração desde a concepção do produto.' },
   { icon: Database, title: 'Mais de 60% da base esquecida', desc: 'CRM subutilizado ou inexistente.' },
   { icon: Users, title: 'Sem padrão de atendimento', desc: 'Corretores internos e externos atuando de jeitos diferentes.' },
   { icon: Megaphone, title: 'Estratégia apenas de divulgação', desc: 'Oportunidades perdidas por falta de processo.' },
@@ -19,8 +19,8 @@ const PROBLEMS = [
 
 const DIFERENCIAIS = [
   { icon: Target, title: 'Estratégia 100% focada no imobiliário', items: ['Mais de 10 anos de experiência exclusiva no setor', 'Conhecimento profundo das dores e oportunidades', 'Metodologia testada em diversos empreendimentos'] },
-  { icon: Settings2, title: 'Marketing + Vendas = uma só operação', items: ['Fim da desconexão entre marketing e comercial', 'Processos integrados que maximizam conversão', 'CRM, scripts, treinamento e acompanhamento'] },
-  { icon: LineChart, title: 'Resultados mensuráveis e previsíveis', items: ['KPIs de resultado e perfomance', 'Metas claras e acompanhamento de performance', 'Otimização constante baseada em dados'] },
+  { icon: Settings2, title: 'Marketing + Vendas = uma só operação', items: ['Fim da desconexão entre marketing e comercial', 'Processos integrados que maximizam a conversão', 'CRM, scripts, treinamento e acompanhamento'] },
+  { icon: LineChart, title: 'Resultados mensuráveis e previsíveis', items: ['KPIs de resultado e performance', 'Metas claras e acompanhamento de performance', 'Otimização constante baseada em dados'] },
 ];
 
 const ETAPAS = [
@@ -105,7 +105,7 @@ export default function HomePage() {
 
       <section className="py-20 md:py-24">
         <div className="mx-auto max-w-[1200px] px-5">
-          <SectionHeading eyebrow="Metodologia GR21" title=" 5 etapas que transformam operações comerciais e de marketing em uma máquina de vendas previsível" subtitle="" />
+          <SectionHeading eyebrow="Metodologia GR21" title="5 etapas que transformam operações comerciais e de marketing em uma máquina de vendas previsível" subtitle="" />
           <div className="mt-14 space-y-5">
             {ETAPAS?.map((e, i) => {
               const Icon = e?.icon;
@@ -128,7 +128,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <CtaBand title="Pronto para acelerar as vendas do sua incorporadora?" subtitle="Agende um diagnóstico gratuito e descubra como transformar seus resultados." />
+      <CtaBand title="Pronto para acelerar as vendas da sua incorporadora?" subtitle="Agende um diagnóstico gratuito e descubra como transformar seus resultados." />
     </>
   );
 }

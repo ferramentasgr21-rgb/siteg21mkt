@@ -64,7 +64,7 @@ const VALORES = [
   {
     icon: Rocket,
     title: 'Inovação constante',
-    desc: 'Sempre atentos as tendências do mercado.'
+    desc: 'Sempre atentos às tendências do mercado.'
   },
   {
     icon: ShieldCheck,
@@ -107,15 +107,15 @@ export default function SobrePage() {
 
             <div className="mt-6 space-y-4 text-brand-dark/75 leading-relaxed">
               <p>
-                Fundada por profissionais com mais de 20 anos de experência, 
-                a GR21 é fruto da visão de especialistas que lideraram grandes
-                operações de comerciais de marketing.
+                Fundada por profissionais com mais de 20 anos de experiência, 
+                a GR21 é fruto da visão de especialistas que lideraram grandes 
+                operações comerciais e de marketing.
               </p>
 
               <p>
-                Tendo como propósito acelerar vendas e potencializar marcas, a GR21
-                é um hub de negócios que incorporadoras procuram quando precisam de
-                resultados reais, mensuráveis e sustentáveis.
+                A GR21 estrutura marketing, produto e vendas para transformar empreendimentos
+                imobiliários em operações comerciais mais previsíveis. Não começamos pela campanha. 
+                Começamos entendendo o produto, o mercado, a demanda e a capacidade de vendas.
               </p>
             </div>
           </Reveal>

@@ -88,7 +88,7 @@ export function HomeHero() {
           </span>
 
           <h1 className="mt-6 font-display text-4xl font-bold leading-[1.1] text-white md:text-6xl">
-            Acelere as vendas do sua incorporadora
+            Acelere as vendas da sua incorporadora
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg font-semibold leading-relaxed text-white drop-shadow-lg md:text-xl">
@@ -101,7 +101,7 @@ export function HomeHero() {
               href="/contato"
               className="inline-flex items-center justify-center gap-2 rounded-md bg-brand-emerald px-7 py-4 text-base font-semibold text-white shadow-xl transition-transform hover:scale-105"
             >
-              Agendar Diagnóstico Gratuito
+              Agendar diagnóstico gratuito
               <ArrowRight className="h-5 w-5" />
             </Link>
 
@@ -110,7 +110,7 @@ export function HomeHero() {
               className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/40 px-7 py-4 text-base font-semibold text-white backdrop-blur transition-colors hover:bg-white/10"
             >
               <BarChart3 className="h-5 w-5" />
-              Conheça Nossos Resultados
+              Conheça nossos resultados
             </Link>
           </div>
 

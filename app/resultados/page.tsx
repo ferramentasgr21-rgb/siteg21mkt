@@ -27,7 +27,7 @@ const CASES = [
     ),
     resultados: [
       '100% das unidades vendidas em 18 meses',
-      'Leads + qualificados gerados',
+      'Geração de leads qualificados',
       '9 corretores autônomos engajados',
       '16 imobiliárias envolvidas',
     ],
@@ -39,7 +39,7 @@ const CASES = [
     desafio: 'Atingir a meta de 70% vendido no pré-lançamento',
     resultados: [
       '73% das unidades vendidas em pré-lançamento',
-      'VGV de R$58 milhões',
+      'VGV de R$ 58 milhões',
       '48 corretores efetivaram vendas',
       '17 imobiliárias engajadas no lançamento',
     ],
@@ -48,7 +48,7 @@ const CASES = [
     img: '/images/case-aereo.jpg',
     tag: 'Lançamento',
     title: 'Residencial Sequoia',
-    desafio: 'Vender 100% das unidades através de corretores parceiros',
+    desafio: 'Vender 100% das unidades por meio de corretores parceiros',
     resultados: [
       '100% vendido em 12 meses',
       '+200 corretores engajados no lançamento',
@@ -58,7 +58,7 @@ const CASES = [
   },
 ];
 
-const BENEFICIOS = ['Equipe comercial mais produtiva com processo padronizado', 'Processos de vendas e marketing bem definidos', 'Redução no tempo médio de venda', 'Melhora na taxa de conversão do funil', 'ROI médio de mídia paga sustentável', 'Aproveitamento da base de leads'];
+const BENEFICIOS = ['Equipe comercial mais produtiva com processo padronizado', 'Processos de vendas e marketing bem definidos', 'Redução no tempo médio de venda', 'Melhoria na taxa de conversão do funil', 'ROI médio de mídia paga sustentável', 'Aproveitamento da base de leads'];
 
 export default function ResultadosPage() {
   return (
@@ -71,7 +71,7 @@ export default function ResultadosPage() {
 
       <section className="py-20 md:py-24">
         <div className="mx-auto max-w-[1200px] px-5">
-          <SectionHeading eyebrow="Cases de sucesso" title=" Veja por que incorporadoras confiam na GR21" subtitle="" />
+          <SectionHeading eyebrow="Cases de sucesso" title="Veja por que incorporadoras confiam na GR21" subtitle="" />
           <div className="mt-14 space-y-8">
             {CASES?.map((c, i) => (
               <Reveal key={c?.title} delay={0.05}>
@@ -114,7 +114,7 @@ export default function ResultadosPage() {
         </div>
       </section>
 
-      <CtaBand title="Quer resultados assim no seu incorporadora?" subtitle="Agende um diagnóstico gratuito e comece a acelerar suas vendas." />
+      <CtaBand title="Quer resultados assim na sua incorporadora?" subtitle="Agende um diagnóstico gratuito e comece a acelerar suas vendas." />
     </>
   );
 }
