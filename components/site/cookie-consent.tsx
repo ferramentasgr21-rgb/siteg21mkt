@@ -13,7 +13,7 @@ function applyConsent(choice: ConsentChoice) {
   if (typeof window === 'undefined') return;
 
   const dataLayer = ((window as any).dataLayer = (window as any).dataLayer || []);
-  function gtag() {
+  function gtag(..._args: any[]) {
     dataLayer.push(arguments);
   }
 
