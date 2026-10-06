@@ -13,13 +13,16 @@ function applyConsent(choice: ConsentChoice) {
   if (typeof window === 'undefined') return;
 
   const dataLayer = ((window as any).dataLayer = (window as any).dataLayer || []);
-  const gtag = (...args: any[]) => dataLayer.push(args);
+  function gtag() {
+    dataLayer.push(arguments);
+  }
 
   gtag('consent', 'update', {
     analytics_storage: choice.analytics ? 'granted' : 'denied',
     ad_storage: choice.marketing ? 'granted' : 'denied',
     ad_user_data: choice.marketing ? 'granted' : 'denied',
     ad_personalization: choice.marketing ? 'granted' : 'denied',
+    personalization_storage: choice.marketing ? 'granted' : 'denied',
     functionality_storage: 'granted',
     security_storage: 'granted',
   });
