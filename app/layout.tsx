@@ -8,6 +8,7 @@ import { ChunkLoadErrorHandler } from '@/components/chunk-load-error-handler';
 import { Navbar } from '@/components/site/navbar';
 import { Footer } from '@/components/site/footer';
 import { WhatsappButton } from '@/components/site/whatsapp-button';
+import { CookieConsent } from '@/components/site/cookie-consent';
 import { SITE } from '@/lib/site';
 
 const poppins = Poppins({
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-twitter: {
+  twitter: {
     card: 'summary_large_image',
     title: 'GR21 | Aceleradora de Vendas e Marketing Imobiliário',
     description: SITE.description,
@@ -79,6 +80,23 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${poppins.variable} font-sans bg-white text-brand-dark antialiased`}
       >
+        <Script id="gr21-consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              ad_storage: 'denied',
+              analytics_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              personalization_storage: 'denied',
+              functionality_storage: 'granted',
+              security_storage: 'granted',
+              wait_for_update: 500
+            });
+          `}
+        </Script>
+
         <Script
           id="abacus-chatllm"
           src="https://apps.abacus.ai/chatllm/appllm-lib.js"
@@ -109,6 +127,7 @@ export default function RootLayout({
         <main className="min-h-screen">{children}</main>
         <Footer />
         <WhatsappButton />
+        <CookieConsent />
         <Toaster />
         <ChunkLoadErrorHandler />
       </body>

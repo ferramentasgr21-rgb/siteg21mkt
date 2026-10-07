@@ -208,29 +208,6 @@ function prepareSubmissionMetadata() {
   if (pageInput) pageInput.value = window.location.href;
 }
 
-/**
- * Dispara eventos somente quando as ferramentas já estiverem instaladas.
- * Este arquivo não carrega Google Analytics, GTM ou Meta Pixel por conta própria.
- */
-function trackSuccessfulLead() {
-  if (Array.isArray(window.dataLayer)) {
-    window.dataLayer.push({
-      event: "lead_form_success",
-      form_name: "diagnostico-gr21",
-    });
-  }
-
-  if (typeof window.gtag === "function") {
-    window.gtag("event", "generate_lead", {
-      form_name: "diagnostico-gr21",
-    });
-  }
-
-  if (typeof window.fbq === "function") {
-    window.fbq("track", "Lead");
-  }
-}
-
 whatsappInput?.addEventListener("input", (event) => {
   event.target.value = formatBrazilianPhone(event.target.value);
   setFieldError("whatsapp");
@@ -302,32 +279,8 @@ form?.addEventListener("submit", async (event) => {
     if (!response.ok) {
       throw new Error(`Falha no envio: ${response.status}`);
     }
-
- trackSuccessfulLead();
-
-window.dataLayer = window.dataLayer || [];
-
-window.dataLayer.push({
-  event: "gr21_generate_lead",
-  form_name: "diagnostico_gr21",
-  lead_source: "landing_page",
-  lead_type: "form_submit",
-  page_type: "form_submit_success",
-  eventCallback: function () {
-    window.location.assign("/diagnostico-gr21/obrigado.html");
-  },
-  eventTimeout: 1500,
-});
-
-window.setTimeout(() => {
-  window.location.assign("/diagnostico-gr21/obrigado.html");
-}, 1600);
-
-form.reset();
-hydrateCampaignTracking();
-Object.keys(fields).forEach((fieldName) => setFieldError(fieldName));
-
-return;
+    window.location.assign(THANK_YOU_URL);
+    return;
   } catch (error) {
     console.error("Erro ao enviar formulário:", error);
 
