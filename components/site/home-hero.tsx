@@ -6,10 +6,7 @@ import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, BarChart3 } from 'lucide-react';
 
 const HERO_SLIDES = [
-  {
-    image: '/images/hero-slide-01.jpg',
-    label: 'Estratégia comercial imobiliária',
-  },
+  
   {
     image: '/images/hero-slide-02.jpg',
     label: 'Marketing imobiliário de alta performance',
