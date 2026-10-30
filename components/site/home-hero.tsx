@@ -10,10 +10,7 @@ const HERO_SLIDES = [
     image: '/images/hero-slide-01.jpg',
     label: 'Estratégia comercial imobiliária',
   },
-  {
-    image: '/images/hero-slide-02.jpg',
-    label: 'Marketing imobiliário de alta performance',
-  },
+
 ]; 	
 
 export function HomeHero() {
