@@ -1,0 +1,21 @@
+{
+  "name": "GR21 Aceleradora de Vendas e Marketing Imobiliário",
+  "short_name": "GR21",
+  "description": "Consultoria integrada de marketing e vendas focada no mercado imobiliário.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#003f3d",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
