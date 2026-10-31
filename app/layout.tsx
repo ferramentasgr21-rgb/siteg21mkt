@@ -40,13 +40,37 @@ export const metadata: Metadata = {
     'Maringá',
   ],
   authors: [{ name: 'GR21' }],
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  manifest: '/site.webmanifest',
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-192x192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/icon-512x512.png', type: 'image/png', sizes: '512x512' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: [
+      { url: '/apple-touch-icon.png', type: 'image/png', sizes: '180x180' },
+    ],
   },
   openGraph: {
     title: 'GR21 | Aceleradora de Vendas e Marketing Imobiliário',
     description: SITE.description,
+    url: SITE.url,
     type: 'website',
     locale: 'pt_BR',
     siteName: 'GR21',
@@ -55,7 +79,7 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'GR21',
+        alt: 'GR21 — Aceleradora de Vendas e Marketing Imobiliário',
       },
     ],
   },
@@ -70,6 +94,38 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${SITE.url}/#organization`,
+  name: 'GR21 Aceleradora de Vendas e Marketing Imobiliário',
+  alternateName: 'GR21',
+  url: SITE.url,
+  logo: {
+    '@type': 'ImageObject',
+    url: `${SITE.url}/icon-512x512.png`,
+    width: 512,
+    height: 512,
+  },
+  image: `${SITE.url}/og-image.png`,
+  description: SITE.description,
+  email: SITE.email,
+  telephone: SITE.phoneDisplay,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Avenida Carneiro Leão, 563, Sala 1508',
+    addressLocality: 'Maringá',
+    addressRegion: 'PR',
+    postalCode: '87014-010',
+    addressCountry: 'BR',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'Brasil',
+  },
+  sameAs: [SITE.social.instagram, SITE.social.linkedin],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -77,6 +133,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${poppins.variable} font-sans bg-white text-brand-dark antialiased`}
       >
